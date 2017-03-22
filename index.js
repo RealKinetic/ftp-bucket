@@ -98,7 +98,7 @@ function validationRequest(req) {
 function checkStringNotEmpty(req, prop) {
     return req.hasOwnProperty(prop)
            && typeof req[prop] === 'string'
-           && req[prop].length
+           && req[prop].length;
 }
 // [END functions_validate]
 
@@ -110,7 +110,7 @@ function checkStringNotEmpty(req, prop) {
  * @returns {object} Response object.
  */
 function makeErrorResponse(err) {
-    return err
+    return err;
 }
 // [END functions_utility]
 
