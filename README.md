@@ -14,7 +14,7 @@ The only deployed requirement is that the following APIs are enabled:
 2. Cloud Functions
 3. Cloud Storage
 
-To develop locally, you can use the cloud function emulator.  Documentation to set up the emulator can be found [here.](https://cloud.google.com/functions/docs/emulator).
+To develop locally, you can use the cloud function emulator.  Documentation to set up the emulator can be found [here.](https://cloud.google.com/functions/docs/emulator)
 
 Once setup, test locally with...
 

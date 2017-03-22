@@ -151,7 +151,7 @@ exports.importFTP = function importFTP (req, res) {
             return ftpGet(
                 ftp, req.body.host, req.body.fileName, req.body.user, req.body.password
                 ).catch((err) => {
-                    console.log('ERROR!: ' + err);
+                    console.error(err);
                     res.status(500).send(makeErrorResponse(err));
                 });
         })
