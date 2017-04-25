@@ -18,10 +18,11 @@ To develop locally, you can use the cloud function emulator.  Documentation to s
 
 Once setup, test locally with...
 
-1. Start the emulator: `functions start`
-2. Deploy the cloud function: `functions deploy importFTP --trigger-http`
-3. Test the function: `functions call importFTP --data '{"bucketName": "bucket", "host":"host", "user":"user", "password":"password", "fileName":"file.txt"}'`
-4. Optionally stop the emulator: `functions stop`
+1. Install dependencies: `npm install`
+2. Start the emulator: `functions start`
+3. Deploy the cloud function: `functions deploy importFTP --trigger-http`
+4. Test the function: `functions call importFTP --data '{"bucketName": "bucket", "host":"host", "user":"user", "password":"password", "fileName":"file.txt"}'`
+5. Optionally stop the emulator: `functions stop`
 
 ## Deployment
 
