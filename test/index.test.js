@@ -1,3 +1,5 @@
+// Copyright 2017 Real Kinetic, LLC. All Rights Reserved.
+
 'use strict';
 
 var path = require('path');
