@@ -150,10 +150,7 @@ exports.importFTP = function importFTP (req, res) {
 
             return ftpGet(
                 ftp, req.body.host, req.body.fileName, req.body.user, req.body.password
-                ).catch((err) => {
-                    console.error(err);
-                    res.status(500).send(makeErrorResponse(err));
-                });
+            );
         })
         .then((stream) => {
             return new Promise(function (resolve, reject) {
@@ -170,7 +167,13 @@ exports.importFTP = function importFTP (req, res) {
         })
         .catch((err) => {
             console.error(err);
-            res.status(err.code || 500).send(makeErrorResponse(err));
+            if (err.code && err.code == 550) { // file not found
+                res.status(404).send(makeErrorResponse(err));
+            } else if (err.code && err.code == 530) { // unauthorized
+                res.status(401).send(makeErrorResponse(err));
+            } else {
+                res.status(err.code || 500).send(makeErrorResponse(err));
+            }
         });
 };
 // [END functions_endpoint]
